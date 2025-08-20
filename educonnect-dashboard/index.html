@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduConnect - School Management Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+</head>
+<body>
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"/>
+            <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+        </svg>
+    </button>
+
+    <!-- Login Page -->
+    <div class="login-container" id="loginPage">
+        <div class="login-card fade-in">
+            <div class="login-header">
+                <h1>🎓 EduConnect</h1>
+                <p>School Management Dashboard</p>
+            </div>
+
+            <div class="role-selection">
+                <h3>Select Your Role</h3>
+                <div class="role-buttons">
+                    <div class="role-btn" data-role="admin">
+                        <svg class="role-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="8.5" cy="7" r="4"/>
+                            <path d="M20 8v6M23 11h-6"/>
+                        </svg>
+                        <div class="role-info">
+                            <h4>Administrator</h4>
+                            <p>Manage students, teachers, and courses</p>
+                        </div>
+                    </div>
+
+                    <div class="role-btn" data-role="teacher">
+                        <svg class="role-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                        <div class="role-info">
+                            <h4>Teacher</h4>
+                            <p>Manage grades and view student progress</p>
+                        </div>
+                    </div>
+
+                    <div class="role-btn" data-role="student">
+                        <svg class="role-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                            <circle cx="12" cy="7" r="4"/>
+                        </svg>
+                        <div class="role-info">
+                            <h4>Student</h4>
+                            <p>View courses, grades, and profile</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <form class="login-form" id="loginForm">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required placeholder="Enter your username">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required placeholder="Enter your password">
+                </div>
+                <button type="submit" class="login-btn" id="loginBtn" disabled>
+                    Select a role to continue
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Dashboard Container (Hidden initially) -->
+    <div class="dashboard-container hidden" id="dashboardContainer">
+        <!-- Dashboard content will be loaded here -->
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
